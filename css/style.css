@@ -1,0 +1,657 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+a{
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+body{
+    margin: auto;
+    background-color: #fdfefe;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        width: 1370px;
+    }
+}
+
+/*-----------------------------------
+        Header
+-------------------------------------*/
+header{
+    width: 100%;
+    top: 0;
+    transition: top 0.5s ease;
+    height: 20px;
+    z-index: 999;
+}
+.nav-up {
+    top: -116px;
+}
+.header-color{
+    background-color: #ff7457;
+    background: transparent;
+
+}
+
+nav ul{
+    padding: 30px 0;
+    float: right;
+    list-style: none;
+}
+nav ul li{
+    padding: 20px;
+    display: inline-block;
+}
+nav ul li a{
+    text-transform: uppercase;
+    color: #49494a;
+}
+nav ul li a.active, nav ul li a:hover{
+    color: #ff7457;
+    transition: .5s ease;
+    /*border-bottom: 1px solid #49494a;*/
+}
+.main{
+    margin-top: 116px;
+}
+
+/*-----------------------------------
+        Side Profile
+-------------------------------------*/
+@media (max-width: 768px) {
+    .profile{
+        padding: 0 !important;
+    }
+}
+.profile .info{
+    padding: 10px;
+    background: #ff7457;
+    text-align: center;
+}
+.profile .info img.profile-img{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border-radius:50%;
+}
+.profile .info h1.name{
+    font-size: 18px;
+    padding: 20px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+.profile .info h1.name span{
+    color: white;
+}
+.profile .info h3.occupation{
+    font-size: 14px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+.profile .info ul.social-icon{
+    list-style: none;
+    padding: 20px;
+}
+.profile .info ul.social-icon li{
+    display: inline-block;
+    padding: 5px;
+}
+.profile .info ul.social-icon li a{
+    color: white;
+}
+
+.profile .cv-box{
+    padding: 30px;
+    background: #f9fafb;
+    text-align: center;
+}
+.profile .cv-box a{
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid #ff7457;
+    color: #49494a;
+}
+.profile .cv-box a:hover{
+    border: 2px solid #ff7457;
+    color: white;
+    background: #ff7457;
+    transition: 0.5s ease;
+}
+
+.main-content{
+    padding: 50px;
+    background: #fff;
+}
+.main-content .title{
+    padding: 10px 0;
+}
+.main-content .title h3{
+    font-size: 18px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #49494a;
+    opacity: .8;
+}
+.main-content .title .line{
+    margin-left: 30px;
+    width: 40px;
+    border: 1px solid #ff7457;
+}
+.main-content .about p.content{
+    font-size: 15px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    line-height: 2;
+    color: #49494a;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+.main-content .about p.content span{
+    color: #ff7457;
+    
+}
+/*-----------------------------------
+        Portfolio Section
+-------------------------------------*/
+.portfolio .portfolio-item{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.portfolio .portfolio-item .image-box{
+    position: relative;
+    text-align: center;
+}
+.portfolio .portfolio-item .image-box img{
+    height: auto;
+    width: auto;
+}
+.portfolio .portfolio-item .image-box .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000;
+  opacity: 0;
+}
+.portfolio .portfolio-item .image-box:hover .overlay{
+    opacity: 0.3;
+}
+
+.portfolio .portfolio-item .image-box:hover{
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+.portfolio .portfolio-item .image-box:hover img{
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.portfolio .portfolio-item .image-box img{
+    width: 100%;
+    display: block;
+}
+.portfolio .portfolio-item h2.title{
+    font-size: 16px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: #49494a;
+    padding: 30px 0;
+    opacity: .8;
+}
+.portfolio .portfolio-item a{
+    padding: 10px 16px;
+    font-size: 12px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    border: 1px solid #ff7457;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+     border-radius: 100px;
+    color: #49494a;
+}
+.portfolio .portfolio-item a:hover{
+    color: white;
+    background: #ff7457;
+    transition: .5s ease;
+}
+.view-more{
+    margin: 30px 0;
+    text-align: center;
+}
+.view-more a{
+    padding: 12px 32px;
+    background: #ff7457;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: 1px solid #ff7457;
+    cursor: pointer;
+}
+.view-more a:hover{
+    color: #49494a;
+    background: transparent;
+    border: 1px solid #ff7457;
+    transition: .5s ease;
+}
+.social {
+    text-align: center;
+    padding: 40px;
+}
+.social ul{
+    list-style: none;
+}
+.social ul li{
+    display: inline-block;
+    margin: 5px;
+}
+
+
+
+
+/*-----------------------------------
+        Contact Section
+-------------------------------------*/
+.contact{
+    background: #fdfefe;
+}
+
+.contact-wrapper{
+    padding: 80px 10px 0 10px;
+}
+.contact h1.title{
+    font-size: 24px;
+    font-weight: bolder;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #49494a;
+    opacity: .8;
+}
+.contact .details{
+    display: block;
+    padding: 50px 50px;
+    font-size: 15px;
+    word-spacing: 3px;
+    letter-spacing: 1px;    
+}
+.contact .details .details-act{
+    display: inline;
+    margin-right: 50px;
+}
+.contact .details span{
+    color: #ff7457;
+    
+    text-transform: uppercase;
+}
+.contact .social-links .title{
+    color: #ff7457;
+    font-size: 18px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+.contact .social-links .title img{
+    vertical-align: middle;
+    height: 32px;
+    width: auto;
+}
+.contact .social-links .social-link-item{
+    display:table;
+}
+.contact .social-links .row{
+    padding: 10px 40px;
+}
+.contact .social-links .social-link-item img{
+    display: table-cell;
+    padding: 10px;
+    opacity: 1  ;
+}
+.contact .social-links .social-link-item p{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 15px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+.contact .social-links .social-link-item p a{
+    color: #49494a;
+    text-decoration: none;
+}
+.contact .social-links .social-link-item p a:hover{
+    color: #ff7457;
+}
+.contact .feedback-form{
+    padding: 50px 0 0 0;
+}
+.contact .feedback-form .title{
+    color: #ff7457;
+    font-size: 18px;
+}
+.contact .feedback-form .title img{
+    vertical-align: middle;
+    height: 32px;
+    width: auto;
+}
+.contact .feedback-form form{
+    width: 100%
+}
+.contact .feedback-form form{
+    padding: 20px 0 0 0;
+}
+.contact .feedback-form form input,.contact .feedback-form form textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ff7457;
+    border-radius: 5px;
+    background: #fdfefe;
+}
+.contact .feedback-form form input:focus,.contact .feedback-form form textarea:focus{
+    border-color: #ff7457;
+}
+
+.contact .feedback-form form .btn-submit{
+    padding: 15px 40px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ff7457;
+    background: #ff7457;
+    color: white;
+}
+.contact .feedback-form form .btn-submit:hover{
+    background: #fdfefe;
+    color: #ff7457;
+    border-color: #ff7457;
+    transition: .5s ease;
+}
+.address{
+    padding: 80px 0;
+
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fdfefe;
+}
+.address-wrapper .title{
+    font-size: 24px;
+     letter-spacing: 1px;
+     word-spacing: 3px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #737373; 
+}
+.address .address-wrapper p {
+    padding: 40px 0;
+    line-height: 2;
+    font-size: 28px;
+    word-spacing: 3px;
+     letter-spacing: 1px;
+}
+
+/*-----------------------------------
+        Resume Section
+-------------------------------------*/
+
+.resume{
+    background: #fdfefe;
+}
+.resume-wrapper{
+    padding: 80px 0 0 0;
+}
+.resume-wrapper h1.title{
+    font-size: 24px;
+     letter-spacing: 1px;
+     word-spacing: 3px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #49494a;
+    opacity: 0.6;
+}
+
+.resume-wrapper h2.title{
+    color: #ff7457;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin: 20px 0;
+    opacity: .8;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.resume-wrapper h2.title img{
+    vertical-align: middle;
+    height: 32px;
+    width: auto;
+    opacity: .8;
+}
+.resume-wrapper h3.sub-title{
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #49494a;
+    opacity: .8;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.resume-wrapper .about, .resume-wrapper .skills, .resume-wrapper .education, .resume-wrapper .experience, .resume-wrapper .interest{
+    padding: 20px 20px;
+}
+.resume-wrapper .about p{
+    font-size: 15px;
+    line-height: 2;
+    color: #49494a;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    opacity: .9;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+.resume-wrapper .about p span{
+    color: #ff7457;
+
+}
+.resume-wrapper .skills .core-skills, .resume-wrapper .skills .other-skills{
+    padding: 0 40px;
+}
+.resume-wrapper .skills .skill-cricle{
+    height: 110px;
+    width:110px;
+    background: #fdfefe;
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+    margin: 10px;
+}
+.border-1{
+    border: 2px solid #ff7457;
+}
+.border-2{
+    border: 2px solid #ff7457;
+}
+
+.resume-wrapper .skills .skill-cricle p{
+    vertical-align: middle;
+    display: table-cell;
+    color: #49494a;
+    font-size: 15px;
+}
+.resume-wrapper .skills .skill-progress{
+    display: table;
+    width: 100%;
+    padding: 10px;
+}
+.resume-wrapper .skills .skill-progress .skill-name{
+    width: 35%;
+    font-size: 15px;
+    color: #49494a;
+}
+.resume-wrapper .skills .skill-progress .progress-line{
+    width: 65%;
+    background: transparent;
+}
+.resume-wrapper .skills .skill-progress .skill-name,.resume-wrapper .skills .skill-progress .progress-line{
+    display: table-cell;
+}
+.resume-wrapper .skills .skill-progress .skill-progress-bar{
+    height: 7px;
+    background: #EEEEEE;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.resume-wrapper .skills .skill-progress .progress-bar{
+    background-color: #ff7457 !important;
+    border-radius: 5px;
+}
+.resume-wrapper .education-item{
+    display: table;
+    margin: 30px;
+}
+.resume-wrapper .education-item .icon, .resume-wrapper .education-item .school-content{
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 10px;
+}
+.school_icon{
+    opacity: .7;
+}
+.resume-wrapper .education-item .school-content .school-degree{
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #49494a;
+    opacity: .8;
+    padding-bottom: 5px;
+}
+.resume-wrapper .education-item .school-content .school-name{
+    font-size: 15px;
+    color: #49494a;
+    opacity: .8;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.resume-wrapper .education-item .school-content p.year{
+    color: #ff7457;
+    font-size: 14px;
+    opacity: .99;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    padding-top: 5px;
+}
+.resume-wrapper .interest .interest-wrapper{
+    padding: 10px 40px;
+    
+}
+.resume-wrapper .interest .interest-item{
+    margin: 10px;
+    padding: 15px;
+    background-color: #fdfefe;
+    border: 1px solid #ff7457;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .contact p.details{
+        padding: 50px 10px;
+    }
+    .contact .social-links .row{
+        padding: 10px;
+    }
+    .address-wrapper{
+        padding: 20px;
+    }
+    .address .address-wrapper p{
+        padding: 20px 0;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    .address{
+        padding: 20px 0;
+    }
+    .resume-wrapper .skills .skill-progress .skill-name{
+        width: 100%;
+        display: block;
+    }
+    .resume-wrapper .skills .skill-progress .progress-line{
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+    }
+
+}
+/*-----------------------------------
+        Resume Section
+-------------------------------------*/
